@@ -1,0 +1,621 @@
+/* Head, Body & Footer ---------------------------------------------------------------------------------------------- */
+
+.main-image {
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:50px;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: lightgray;
+    bottom:0;
+    left:0;
+    right:0;
+    margin-bottom:0;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-family: Verdana, serif;
+}
+
+/* Website background ----------------------------------------------------------------------------------------------- */
+html {
+    background: url(img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Verdana, serif;
+}
+/* Navbar ----------------------------------------------------------------------------------------------------------- */
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: lightgrey;
+    font-family: Verdana, serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 30px;
+    background-color: lightgray;
+    font-family: Verdana, serif; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a green background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #80af2b;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 160px;
+    box-shadow: 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a green background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #80af2b;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    list-style-type: upper-roman;
+    margin: 0;
+    padding: 40px;
+}
+
+/* When the screen is less than 600px wide, vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .navbar a, div.dropdown, button.dropbtn, .navbar a.admin_page {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+}
+
+.navbar a.admin_page {
+    float: right;
+    font-size: 25px;
+    padding: 14px 30px;
+    border: none;
+}
+
+/* About Me Page ---------------------------------------------------------------------------------------------------- */
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    flex-direction: row;
+    -webkit-flex-flow: row;
+    justify-content: space-evenly;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+
+.flex-item1, .flex-item2, .flex-item3 {
+    background: #80af2b;
+    padding: 5px;
+    width: 500px;
+    height: 400px;
+    margin-top: 30px;
+
+    line-height: 750px;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+}
+
+.centered_nieuwbouw, .centered_verbouw, .centered_interieurbouw {
+    font-size: 1.5em;
+}
+
+.p_aboutme, .p_aboutme2, .p_aboutme3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.h1_aboutme {
+    text-align: center;
+}
+/* Projects Page ----------------------------------------------------------------------------------------------------- */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1200px;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 50%;
+    margin-left: 300px;
+    text-align: center;
+    background-color: #80af2b;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: #80af2b;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Sign Up Page ----------------------------------------------------------------------------------------------------- */
+.signup_text_1 {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 560px;
+    text-align: center;
+}
+
+.fieldset_1 {
+    width: 500px;
+    margin: 25px;
+    height: 215px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.legend_1 {
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+input.email_1 {
+    width: 300px;
+    float: right;
+}
+
+input.text_type_1 {
+    width: 300px;
+    float: right;
+}
+
+input.password_type_1 {
+    width: 300px;
+    float: right;
+}
+
+p.email_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.text_type_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.password_type_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+
+.submit_1 {
+    font-size: 17px;
+    background-color: lightgray;
+    border: 3px solid #33322f;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.p_2 {
+    border: 3px solid black;
+}
+
+
+/* Appointment Page ------------------------------------------------------------------------------------------------- */
+.appointment_text_1 {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 600px;
+    text-align: center;
+}
+
+.fieldset_2 {
+    width: 600px;
+    margin: 25px;
+    height: 540px;
+    border: 3px solid black;
+    padding: 60px;
+}
+
+.legend_2 {
+    font-size: 4.3vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.submit_2 {
+    font-size: 17px;
+    background-color: lightgray;
+    border: 3px solid #33322f;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section.border_for_3 {
+    border: 3px solid #76af22;
+}
+
+section.border_for_2 {
+    border: 3px solid #76af22;
+    margin-top: 10px;
+}
+
+p.datum {
+    border: 3px solid #76af22;
+    padding: 20px;
+}
+
+/* Manage Page ------------------------------------------------------------------------------------------------------ */
+.manage_text_1 {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 600px;
+    text-align: center;
+}
+
+.fieldset_3 {
+    width: 600px;
+    margin: 25px;
+    height: 570px;
+    border: 3px solid black;
+    padding: 60px;
+}
+
+.legend_3 {
+    font-size: 4.3vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.offer_01 {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+p.available_time_01 {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+div.accept_decline {
+    margin-top: 113px;
+}
+
+.accept_1 {
+    font-size: 20px;
+    background-color: #76af22;
+    border: 1px solid #33322f;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 15px 2px;
+    cursor: pointer;
+}
+
+.decline_1 {
+    font-size: 20px;
+    background-color: #d3191e;
+    border: 1px solid #33322f;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 15px 2px;
+    cursor: pointer;
+}
+
+/* Contact Page ----------------------------------------------------------------------------------------------------- */
+
+.contact_me {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 560px;
+    text-align: center;
+}
+
+.fieldset_contact {
+    width: 500px;
+    margin: 25px;
+    height: 345px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.legend_contact {
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+input.contact_name_1 {
+    width: 300px;
+    float: right;
+}
+
+input.contact_email_1 {
+    width: 300px;
+    float: right;
+}
+
+input.contact_subject_1 {
+    width: 300px;
+    float: right;
+}
+
+input.contact_about_1 {
+    width: 300px;
+    float: right;
+}
+
+p.contact_name_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.contact_email_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.contact_subject_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.contact_about_01 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+textarea.contact_about_1 {
+    padding-left: 33px;
+}
+
+.contact_submit_1 {
+    font-size: 17px;
+    background-color: lightgray;
+    border: 3px solid #33322f;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 2px;
+    cursor: pointer;
+}
+
+img.locatie_ermax {
+    float: left;
+    clear: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    border: 3px solid #80af2b;
+}
+
+.google {
+    float: right;
+    clear: right;
+    border: 3px solid #80af2b;
+    margin-top: -355px;
+    margin-right: 65px;
+}
+
+/* Adming Page ------------------------------------------------------------------------------------------------------ */
+
+.admin_login_1 {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 600px;
+    text-align: center;
+}
+
+.fieldset_4 {
+    width: 500px;
+    margin: 50px;
+    height: 230px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.legend_4 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+}
+
+input.text_type_2 {
+    width: 300px;
+    float: right;
+}
+
+input.password_type_2 {
+    width: 300px;
+    float: right;
+}
+
+p.text_type_02 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+p.password_type_02 {
+    clear: both;
+    padding: 5px;
+    text-align: left;
+}
+
+.submit_3 {
+    font-size: 17px;
+    background-color: lightgray;
+    border: 3px solid #33322f;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 23px;
+    cursor: pointer;
+}
